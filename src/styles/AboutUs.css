@@ -1,0 +1,75 @@
+/* About Section Container */
+.about-section {
+   background: linear-gradient(135deg, #1f1f1f, #3f3f3f); /* Sesuai dengan hero */
+   color: #ffffff;
+   padding: 3rem 0;
+   position: relative;
+   overflow: hidden;
+}
+
+/* Title Styling */
+.about-section h2 {
+   font-size: 2.5rem;
+   color: #00ffcc;
+   text-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+   margin-bottom: 1rem;
+}
+
+.about-section p {
+   font-size: 1.2rem;
+   line-height: 1.8;
+   color: #e0e0e0;
+}
+
+/* Highlight Brand Name */
+.about-section .brand-name {
+   color: #00ffcc;
+   font-weight: bold;
+   text-shadow: 0 0 8px rgba(0, 255, 204, 0.6);
+}
+
+/* Visual Content */
+.about-image {
+   max-width: 80%;
+   border-radius: 10px;
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+   margin-top: 2rem;
+}
+
+/* Optional Background Effects */
+.about-section::before {
+   content: "";
+   position: absolute;
+   top: -50px;
+   left: -50px;
+   width: 250px;
+   height: 250px;
+   background: rgba(0, 255, 204, 0.2);
+   border-radius: 50%;
+   filter: blur(100px);
+   z-index: 0;
+}
+
+.about-section::after {
+   content: "";
+   position: absolute;
+   bottom: -50px;
+   right: -50px;
+   width: 300px;
+   height: 300px;
+   background: rgba(0, 255, 204, 0.1);
+   border-radius: 50%;
+   filter: blur(150px);
+   z-index: 0;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+   .about-section .row {
+      flex-direction: column-reverse;
+   }
+
+   .about-image {
+      margin-bottom: 2rem;
+   }
+}

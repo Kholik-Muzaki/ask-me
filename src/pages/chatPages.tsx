@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { getGrogChatCompletion } from "../auth/groq";
+import "../styles/Chat.css";
 
 const Chat: React.FC = () => {
     const [input, setInput] = useState<string>("");
@@ -25,25 +26,25 @@ const Chat: React.FC = () => {
     };
 
     return (
-        <div className="container-fluid   bg-dark text-white vh-100 d-flex flex-column">
-            <header className="py-3 border-bottom border-secondary">
-                <h1 className="text-center text-primary">Chat With AI</h1>
+        <div className="chat-container">
+            <header className="chat-header">
+                <h1 className="chat-title">Chat With AI</h1>
             </header>
-            <div className="flex-grow-1 d-flex flex-column justify-content-between p-4">
-                <div
-                    className="bg-secondary p-3 rounded mb-3 text-white overflow-auto"
-                    style={{ height: "300px", maxHeight: "300px", whiteSpace: "pre-wrap" }}
-                >
+
+            <main className="chat-main">
+                {/* Chat Response Area */}
+                <div className="chat-response-box">
                     {response || (
-                        <p className="text-muted">
+                        <p className="chat-placeholder">
                             <em>No response yet. Ask me something!</em>
                         </p>
                     )}
                 </div>
 
-                <div>
+                {/* Chat Input Area */}
+                <div className="chat-input-area">
                     <textarea
-                        className="form-control bg-dark text-white border-secondary mb-3"
+                        className="chat-textarea"
                         placeholder="Enter your message..."
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
@@ -52,12 +53,12 @@ const Chat: React.FC = () => {
                     <button
                         onClick={handleSend}
                         disabled={loading}
-                        className="btn btn-primary w-100"
+                        className="chat-send-button"
                     >
                         {loading ? "Sending..." : "Send"}
                     </button>
                 </div>
-            </div>
+            </main>
         </div>
     );
 };

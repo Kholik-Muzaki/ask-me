@@ -1,0 +1,120 @@
+/* Chat Container */
+.chat-container {
+   display: flex;
+   flex-direction: column;
+   height: 100vh;
+   background: linear-gradient(135deg, #1f1f1f, #3f3f3f); /* Gradien modern */
+   color: #ffffff;
+   font-family: "Arial", sans-serif;
+   overflow: hidden;
+}
+
+/* Header */
+.chat-header {
+   padding: 1rem 2rem;
+   background: #2a2a2a;
+   border-bottom: 2px solid #00ffcc;
+   text-align: center;
+}
+
+.chat-title {
+   font-size: 2rem;
+   color: #00ffcc;
+   text-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+   margin: 0;
+}
+
+/* Main Chat Area */
+.chat-main {
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 1.5rem 2rem;
+   overflow: hidden;
+}
+
+/* Chat Response Box */
+.chat-response-box {
+   flex-grow: 1;
+   background: #2a2a2a;
+   color: #e0e0e0;
+   border-radius: 10px;
+   padding: 1.5rem;
+   overflow-y: auto;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+   font-size: 1rem;
+   white-space: pre-wrap;
+   margin-bottom: 1.5rem;
+}
+
+.chat-placeholder {
+   color: #888888;
+   font-size: 1rem;
+}
+
+/* Input Area */
+.chat-input-area {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+.chat-textarea {
+   background: #121212;
+   color: #ffffff;
+   border: 2px solid #00ffcc;
+   border-radius: 8px;
+   padding: 1rem;
+   font-size: 1rem;
+   resize: none;
+}
+
+.chat-textarea::placeholder {
+   color: #888888;
+}
+
+.chat-send-button {
+   background-color: #00ffcc;
+   color: #121212;
+   font-size: 1.1rem;
+   font-weight: bold;
+   padding: 0.8rem;
+   border: none;
+   border-radius: 8px;
+   transition: all 0.3s ease-in-out;
+   cursor: pointer;
+}
+
+.chat-send-button:hover {
+   background-color: #00e6b3;
+}
+
+.chat-send-button:disabled {
+   background-color: #555555;
+   color: #cccccc;
+   cursor: not-allowed;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+   .chat-header {
+      padding: 0.8rem 1rem;
+   }
+
+   .chat-main {
+      padding: 1rem 1rem;
+   }
+
+   .chat-response-box {
+      font-size: 0.9rem;
+   }
+
+   .chat-textarea {
+      font-size: 0.9rem;
+   }
+
+   .chat-send-button {
+      font-size: 1rem;
+   }
+}

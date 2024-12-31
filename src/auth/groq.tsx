@@ -17,7 +17,7 @@ export interface ChatCompletion {
 
 export async function getGrogChatCompletion(userInput: string): Promise<string> {
     try {
-        const request : ChatCompletion = await groq.chat.completions.create({
+        const response: ChatCompletion = await groq.chat.completions.create({
             messages: [
                 {
                     role: "user",
@@ -27,7 +27,7 @@ export async function getGrogChatCompletion(userInput: string): Promise<string> 
             model: "llama3-70b-8192",
         });
 
-        const content = request.choices[0]?.message?.content;
+        const content = response.choices[0]?.message?.content;
         return content ?? "No response received.";
     } catch (error) {
         console.error("Error fetching chat completion:", error);

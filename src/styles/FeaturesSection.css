@@ -1,0 +1,65 @@
+.features-section {
+   background-color: #1f1f1f;
+   color: #ffffff;
+   padding: 3rem 0;
+}
+
+/* Title Styling */
+.features-section h2 {
+   font-size: 2.5rem;
+   color: #00ffcc !important;
+   margin-bottom: 1rem;
+   text-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+}
+
+.features-section p {
+   font-size: 1.2rem;
+   color: #e0e0e0 !important;
+}
+
+/* Feature Cards */
+.feature-card {
+   background-color: #292929;
+   border-radius: 10px;
+   padding: 2rem 1.5rem;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.feature-card:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Hover effect */
+}
+
+/* Icons Styling */
+.feature-card .icon {
+   font-size: 3rem;
+   color: #00ffcc;
+   margin-bottom: 1rem;
+   transition: color 0.3s ease-in-out;
+}
+
+.feature-card .icon:hover {
+   color: #ffffff;
+}
+
+/* Title and Text */
+.feature-card h5 {
+   font-size: 1.5rem;
+   font-weight: bold;
+   color: #ffffff;
+   margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+   font-size: 1rem;
+   color: #e0e0e0;
+   margin: 0;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+   .feature-card {
+      margin-bottom: 2rem;
+   }
+}

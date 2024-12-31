@@ -1,0 +1,94 @@
+/* Hero Section Container */
+.hero-section {
+   height: 90vh;
+   background: linear-gradient(135deg, #1f1f1f, #3f3f3f); /* Gradient modern */
+   color: #ffffff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden;
+   position: relative;
+   padding: 5% 0;
+}
+
+/* Hero Content */
+.hero-content h1 {
+   font-size: 3rem;
+   font-weight: bold;
+   margin-bottom: 1rem;
+}
+
+.hero-content h1 span {
+   color: #00ffcc;
+   text-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+}
+
+.hero-content .lead {
+   font-size: 1.2rem;
+   margin-bottom: 2rem;
+   color: #e0e0e0;
+}
+
+.hero-buttons .btn {
+   font-size: 1.1rem;
+   padding: 0.8rem 2rem;
+   border-radius: 5px;
+   transition: all 0.3s ease-in-out;
+}
+
+.hero-buttons .btn-primary-hero {
+   background-color: #00ffcc;
+   color: #121212;
+   border: none;
+}
+
+.hero-buttons .btn-primary-hero:hover {
+   background-color: #00e6b3;
+}
+
+.hero-buttons .btn-secondary-hero {
+   background-color: transparent;
+   color: #00ffcc;
+   border: 2px solid #00ffcc;
+}
+
+.hero-buttons .btn-secondary-hero:hover {
+   background-color: #00ffcc;
+   color: #121212;
+}
+
+/* Hero Visual */
+.hero-visual .hero-image {
+   width: 100%;
+   max-width: 600px;
+   border-radius: 10px;
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Optional Background Effects */
+.hero-section::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 50%;
+   width: 200px;
+   height: 200px;
+   background: rgba(0, 255, 204, 0.2);
+   border-radius: 50%;
+   transform: translateX(-50%);
+   filter: blur(100px);
+   z-index: 0;
+}
+
+.hero-section::after {
+   content: "";
+   position: absolute;
+   bottom: -50px;
+   right: -50px;
+   width: 300px;
+   height: 300px;
+   background: rgba(0, 255, 204, 0.1);
+   border-radius: 50%;
+   filter: blur(150px);
+   z-index: 0;
+}
