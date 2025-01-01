@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/AboutUs.css";
 import aiImage2 from "../assets/ai2.jpg";
+import Aos from "aos";
 
 const AboutUs: React.FC = () => {
+    useEffect(() => {
+        Aos.init();
+        Aos.refresh()
+    }, []);
     return (
-        <section id="about" className="py-5 about-section">
+        <section data-aos="fade-up" data-aos-duration="1000" id="about" className="py-5 about-section">
             <div className="container">
                 <div className="row align-items-center">
                     {/* Text Content */}
-                    <div className="col-lg-6 col-md-12">
+                    <div data-aos="fade-right" data-aos-duration="1000" className="col-lg-6 col-md-12">
                         <h2 className="fw-bold">About Us</h2>
                         <p>
                             At <span className="brand-name">AskAI</span>, we aim to revolutionize how people interact
@@ -23,7 +28,7 @@ const AboutUs: React.FC = () => {
                     </div>
 
                     {/* Visual Content */}
-                    <div className="col-lg-6 col-md-12 text-center">
+                    <div dat-aos="fade-left" data-aos-duration="1000" className="col-lg-6 col-md-12 text-center">
                         <img
                             src={aiImage2}
                             alt="About Us Illustration"

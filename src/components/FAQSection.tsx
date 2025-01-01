@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/FAQSection.css";
+import Aos from "aos";
 
 const FAQSection: React.FC = () => {
+    useEffect(()=> {
+        Aos.init();
+        Aos.refresh();
+    }, [])
     const faqs = [
         {
             question: "How does AskAI work?",
@@ -18,12 +23,12 @@ const FAQSection: React.FC = () => {
     ];
 
     return (
-        <section id="faq" className="py-5 faq-section">
+        <section data-aos="fade-up" data-aos-duration="1000" id="faq" className="py-5 faq-section">
             <div className="container">
                 <h2 className="fw-bold text-center text-light">Frequently Asked Questions</h2>
                 <div className="mt-4">
                     {faqs.map((faq, index) => (
-                        <div className="faq-item" key={index}>
+                        <div data-aos="fade-up" data-aos-duration="1000" className="faq-item" key={index}>
                             <h5 className="faq-question">{faq.question}</h5>
                             <p className="faq-answer">{faq.answer}</p>
                         </div>

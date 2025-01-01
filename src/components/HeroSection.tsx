@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/HeroSection.css";
 import aiImage from "../assets/ai.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const HeroSection: React.FC = () => {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+    }, []);
     return (
-        <section className="hero-section" id="hero">
+        <section data-aos="fade-up" data-aos-duration="1000" className="hero-section" id="hero">
             <div className="container">
                 <div className="row align-items-center">
                     {/* Hero Content */}

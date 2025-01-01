@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/FeaturesSection.css";
+import Aos from "aos";
 
 const FeaturesSection: React.FC = () => {
+    useEffect(() => {
+        Aos.init();
+        Aos.refresh();
+    }, [])
     const dataCard = [
         {
             icon: "bx bx-bolt-circle icon",
@@ -21,13 +26,13 @@ const FeaturesSection: React.FC = () => {
     ];
 
     return (
-        <section id="features" className="py-5 features-section">
+        <section data-aos="fade-up" data-aos-duration="1000" id="features" className="py-5 features-section">
             <div className="container text-center">
                 <h2 className="fw-bold text-light">Our AI-Powered Features</h2>
                 <p className="text-muted">Explore the innovative features that set us apart.</p>
                 <div className="row mt-4">
                     {dataCard.map((item, index) => (
-                        <div className="col-md-4" key={index}>
+                        <div data-aos="fade-up" data-aos-duration="1000" className="col-md-4" key={index}>
                             <div className="feature-card">
                                 <i className={item.icon}></i>
                                 <h5 className="mt-3">{item.title}</h5>

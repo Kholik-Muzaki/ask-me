@@ -2,7 +2,8 @@
    height: 10vh;
    background-color: #1f1f1f;
    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-   font-size: 1.2rem;
+   font-size: 1rem;
+   font-weight: 300;
 }
 
 .navbar-brand {
